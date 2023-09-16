@@ -1,0 +1,238 @@
+body {
+	background-color: rgb(0, 29, 36);
+}
+
+.container {
+	width: 90%;
+	min-width: 50%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.title {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	font-family: sans-serif;
+}
+
+.author {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	font-family: sans-serif;
+}
+
+.board {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-family: sans-serif;
+	border-top: 1px solid #5649ff;
+	border-radius: 11px;
+	padding-top: 1rem;
+}
+
+.title h3 {
+	font-size: 2.5rem;
+	background: linear-gradient(to right, #30CFD0 0%, #821cff 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	padding: 0.8rem 1.7rem;
+	border-bottom: 1px solid #5649ff;
+	border-radius: 0.5rem;
+	margin: 1rem;
+}
+
+.author h3 {
+	width: 9rem;
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: lighter;
+	background: linear-gradient(to right top, #30CFD0 20%, #821cff 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	padding: 0.2rem;
+	border-bottom: 2px solid #30CFD0;
+	border-left: none;
+	border-right: none;
+	border-radius: 0.9rem;
+	margin: 1rem;
+	transition: .5s;
+}
+
+.author h3:hover {
+	width: 14rem;
+	border-radius: 0 0 4px 4px;
+	border-left: 1px solid #30CFD0;
+	border-right: 1px solid #30CFD0;
+	animation: colorChanger 2s infinite;
+}
+
+a {
+	text-decoration: none;
+}
+
+.create-new {
+	padding: 1rem;
+}
+
+.create-new input {
+	color: #30CFD0;
+	font-size: 16px;
+	padding-left: 1rem;
+	border: 1px solid #30CFD0;
+	height: 1.7rem;
+	width: 15rem;
+	border-radius: 20px 0;
+	background: transparent;
+	outline: none;
+	transition: .5s;
+}
+
+.create-new input[type="text"]:focus {
+	animation: colorChanger 2s infinite;
+}
+
+.create-new input[type="text"]:hover {
+	width: 17rem;
+	
+}
+
+.create-new button {
+	background: linear-gradient(to right bottom, #30CFD0 40%, #4423fd 100%);
+	color: rgb(0, 29, 36);
+	font-size: 14px;
+	font-weight: bold;
+	cursor: pointer;
+	width: 17rem;
+	height: 2rem;
+	border: none;
+	border-radius: 0 20px 0;
+	transition: .5s;
+	display: block;
+}
+
+.create-new button:hover {
+	background: linear-gradient(to right bottom, #30CFD0 35%, #7000d8 100%);
+	width: 20rem;
+	color: rgb(148, 0, 123);
+}
+
+.card {
+	padding: .6rem;
+	width: 30.9%;
+	min-width: 14rem;
+	min-height: 4.5rem;
+	border-radius: 5px;
+}
+
+.card p {
+	color: #818181;
+	font-weight: lighter;
+	font-size:.9rem;
+}
+
+.dot1 {
+	height: 12px;
+	width: 12px;
+	background-color: #e93737;
+	border-radius: 50%;
+	display: inline-block;
+}
+.dot2 {
+	height: 12px;
+	width: 12px;
+	background-color: #f3ef17;
+	border-radius: 50%;
+	display: inline-block;
+}
+.dot3 {
+	height: 12px;
+	width: 12px;
+	background-color: #15b400;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+#backlog {
+	background-color: transparent;
+	color: rgb(224, 224, 224);
+	border: 1px solid rgb(2, 210, 247);
+}
+
+#backlog:hover {
+	animation: colorChanger 2s infinite;
+}
+
+#onprogress {
+	background-color: transparent;
+	color: rgb(224, 224, 224);
+	border: 1px solid rgb(247, 231, 2);
+}
+
+#onprogress:hover {
+	animation: colorChanger 2s infinite;
+}
+
+#done {
+	background-color: transparent;
+	color: rgb(224, 224, 224);
+	border: 1px solid rgb(2, 247, 14);
+}
+
+#done:hover {
+	animation: colorChanger 2s infinite;
+}
+
+.task {
+	background-color: rgb(0, 20, 26);
+	color: rgb(50, 255, 211);
+	margin: .4rem .5rem .5rem .5rem;
+	border-bottom: 1px solid rgb(50, 255, 211);
+	border-right: 1px solid rgb(50, 255, 211);
+	border-radius: 5px;
+	padding: 0.5rem 0.2rem 0.5rem 2rem;
+	transition: .3s ease;
+}
+
+.task:hover {
+	background-color: rgb(1, 33, 43);
+}
+
+.task button {
+	background: transparent;
+	width: 1.5rem;
+	height: 1.5rem;
+	padding-bottom: .25rem;
+	border: none;
+	color: aqua;
+	float: right;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.task button:hover {
+	background: aqua;
+	color: rgb(1, 33, 43);
+}
+
+@media screen and (max-width: 780px) {
+	.board {
+		flex-direction: column;
+	}
+	.card {
+		width: 97%;
+		min-width: 16rem;
+		min-height: 4.5rem;
+		margin-bottom: 1rem;
+	}
+  }
+
+@keyframes colorChanger {
+	25% {border-color: red;}
+    50% {border-color: green;}
+    75% {border-color: purple;}
+}
