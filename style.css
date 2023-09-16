@@ -1,7 +1,11 @@
+/* font import */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
 body {
 	/* background-color: rgb(0, 29, 36); */
 	background: linear-gradient(to right bottom, rgb(0, 20, 26) 0%, rgb(0, 73, 92) 100%);
 	min-height: 37.7rem;
+	font-family: 'Ubuntu';
 }
 
 .container {
@@ -16,21 +20,18 @@ body {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	font-family: sans-serif;
 }
 
 .author {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	font-family: sans-serif;
 }
 
 .board {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	font-family: sans-serif;
 	border-top: 1px solid #5649ff;
 	border-radius: 11px;
 	padding-top: 1rem;
@@ -121,6 +122,49 @@ a {
 	width: 20rem;
 	color: rgb(148, 0, 123);
 }
+
+/* start diLalog style */
+.dialog {
+	position: fixed;
+	right: -15rem;
+	bottom: .5rem;
+	padding: 1rem;
+	overflow: hidden;
+	backdrop-filter: blur(8px);
+	border: 1px solid #00e0e0;
+	max-width: 12rem;
+	border-radius: 4px;
+	transition: .5s ease-in-out;
+}
+
+.dialog .title {
+	font-size: larger;
+	font-weight: bold;
+	display: block;
+	color: rgb(255, 255, 255);
+	text-transform: uppercase;
+	padding-bottom: 1.2rem;
+}
+
+.dialog .msg {
+	color: rgb(223, 223, 223);
+	font-size: medium;
+}
+
+.dialog button {
+	border: none;
+	border-radius: 2px;
+	padding: .5rem;
+	font-size: 12px;
+	font-weight: bold;
+	margin-top: .5rem;
+	background: #00e0e0;
+	color: #004b4b;
+	text-transform: uppercase;
+	display: block;
+	cursor: pointer;
+}
+/* end diLalog style */
 
 .card {
 	padding: .6rem;
@@ -231,7 +275,10 @@ a {
 		min-height: 4.5rem;
 		margin-bottom: 1rem;
 	}
-  }
+	.create-new button:hover {
+		width: 18rem;
+	}
+}
 
 @keyframes colorChanger {
 	25% {border-color: red;}
