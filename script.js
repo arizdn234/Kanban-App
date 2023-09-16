@@ -1,13 +1,15 @@
 function createNew(){
     const backlog = document.getElementById("backlog");
     const newItem = document.getElementById("item").value;
+    const test = document.querySelectorAll('.task');
+    const rand = Math.random()*10
     if (!newItem) {
         console.log("Input kosong");
     } else {
         backlog.innerHTML += `
-        <div class="task" id="${newItem.toLowerCase().split(" ").join("")}" draggable="true" ondragstart="drag(event)">
+        <div class="task" id="${newItem.toLowerCase().split(" ").join("") + rand}" draggable="true" ondragstart="drag(event)">
             <span>${newItem}</span>
-            <button onclick="move('${newItem}')">&#8594;</button>
+            <button onclick="move('${newItem.toLowerCase().split(" ").join("") + rand}')">&#8594;</button>
         </div>
         `
     }
