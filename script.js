@@ -3,7 +3,8 @@ function createNew(){
     const newItem = document.getElementById("item").value;
     const rand = Math.random()*10
     if (!newItem) {
-        console.log("Input kosong");
+        document.querySelector('.msg').innerHTML = 'Inputnya masih kosong laaa... isi apaan gtu'
+        document.querySelector('.dialog').style.right = '.5rem'
     } else {
         backlog.innerHTML += `
         <div class="task" id="${newItem.toLowerCase().split(" ").join("") + rand}" draggable="true" ondragstart="drag(event)">
@@ -13,6 +14,8 @@ function createNew(){
         `
     }
 }
+
+document.getElementById('close').addEventListener('click', () => document.querySelector('.dialog').style.right = '-15rem' )
 
 function move(id) {
     const backlog = document.getElementById('backlog');
