@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- title section -->
+        <div class="title">
+            <h3>Assignment 2 MSIB 5 x Hacktiv8</h3>
+        </div>
+
+        <!-- createNew section -->
+        <div class="create-new">
+            <input type="text" name="item" id="item" spellcheck="false" placeholder="Masukkan item">
+            <button onclick="createNew()">Buat</span>
+            </span>
+        </div>
+
+        <!-- board section -->
+        <div class="board">
+            <div class="card" id="backlog" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+                <div class="dot3"></div>
+                <strong>Backlog</strong>
+                <p>Item belum dikerjakan</p>
+                
+                <!-- task list -->
+                <div class="task" id="contoh1" draggable="true" ondragstart="drag(event)">
+                    <span>Contoh</span>
+                    <button onclick="move('contoh1')">&#8594;</button>
+                </div>
+                <div class="task" id="contoh2" draggable="true" ondragstart="drag(event)">
+                    <span>Contoh</span>
+                    <button onclick="move('contoh2')">&#8594;</button>
+                </div>
+                <div class="task" id="contoh3" draggable="true" ondragstart="drag(event)">
+                    <span>Contoh</span>
+                    <button onclick="move('contoh3')">&#8594;</button>
+                </div>
+            </div>
+            <div class="card" id="onprogress" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+                <div class="dot3"></div>
+                <strong>On Progress</strong>
+                <p>Item sedang dalam proses</p>
+            </div>
+            <div class="card" id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+                <div class="dot3"></div>
+                <strong>Done</strong>
+                <p>Item telah selesai dikerjakan</p>
+            </div>
+        </div>
+
+        <!-- author section -->
+        <a href="https://arizdn234.github.io/Web-profile-arizdn.github.io/" target="_blank" rel="noopener noreferrer">
+            <div class="author">
+                <h3>by Ari Zidane</h3>
+            </div>
+        </a>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
