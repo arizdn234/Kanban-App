@@ -1,5 +1,7 @@
 body {
-	background-color: rgb(0, 29, 36);
+	/* background-color: rgb(0, 29, 36); */
+	background: linear-gradient(to right bottom, rgb(0, 20, 26) 0%, rgb(0, 73, 92) 100%);
+	min-height: 37.7rem;
 }
 
 .container {

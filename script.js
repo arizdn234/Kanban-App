@@ -1,7 +1,6 @@
 function createNew(){
     const backlog = document.getElementById("backlog");
     const newItem = document.getElementById("item").value;
-    const test = document.querySelectorAll('.task');
     const rand = Math.random()*10
     if (!newItem) {
         console.log("Input kosong");
