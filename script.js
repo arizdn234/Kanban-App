@@ -35,6 +35,16 @@ function move(id) {
     }
 }
 
+function hapus(id) {
+    document.querySelector('.msg').innerHTML = 'Maap yak.. tombol hapus masih blom fungsi wkwk'
+    document.querySelector('.dialog').style.right = '.5rem'
+}
+
+function edit(id) {
+    document.querySelector('.msg').innerHTML = 'Tombol edit masih blom fungsi bwangg wkwk'
+    document.querySelector('.dialog').style.right = '.5rem'
+}
+
 function drag(ev) {
     ev.dataTransfer.setData("text", ev.target.id);
 }
