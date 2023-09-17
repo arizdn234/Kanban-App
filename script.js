@@ -9,7 +9,9 @@ function createNew(){
         backlog.innerHTML += `
         <div class="task" id="${newItem.toLowerCase().split(" ").join("") + rand}" draggable="true" ondragstart="drag(event)">
             <span>${newItem}</span>
-            <button onclick="move('${newItem.toLowerCase().split(" ").join("") + rand}')">&#8594;</button>
+            <button onclick="hapus('${newItem.toLowerCase().split(" ").join("") + rand}')" title="Tombol hapus item">&#x2715;</button>
+            <button onclick="edit('${newItem.toLowerCase().split(" ").join("") + rand}')" title="Tombol edit item">&#9998;</button>
+            <button onclick="move('${newItem.toLowerCase().split(" ").join("") + rand}')" title="Tombol pindah item">&#10004;</button>
         </div>
         `
     }
@@ -33,6 +35,19 @@ function move(id) {
         done.removeChild(item);
         backlog.appendChild(item)
     }
+}
+
+function hapus(id) {
+    // document.querySelector('.msg').innerHTML = 'Maap yak.. tombol hapus masih blom fungsi wkwk'
+    // document.querySelector('.dialog').style.right = '.5rem'
+    // console.log(id);
+    const ele = document.getElementById(id)
+    ele.parentNode.removeChild(ele)
+}
+
+function edit(id) {
+    document.querySelector('.msg').innerHTML = 'Maap yak.. tombol edit masih blom fungsi wkwk'
+    document.querySelector('.dialog').style.right = '.5rem'
 }
 
 function drag(ev) {

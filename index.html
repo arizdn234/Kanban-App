@@ -40,15 +40,21 @@
                 <!-- task list -->
                 <div class="task" id="contoh1" draggable="true" ondragstart="drag(event)">
                     <span>Contoh</span>
-                    <button onclick="move('contoh1')">&#8594;</button>
+                    <button onclick="hapus('contoh1')" title="Tombol hapus item">&#x2715;</button>
+                    <button onclick="edit('contoh1')" title="Tombol edit item">&#9998;</button>
+                    <button onclick="move('contoh1')" title="Tombol pindah item">&#10004;</button>
                 </div>
                 <div class="task" id="contoh2" draggable="true" ondragstart="drag(event)">
                     <span>Contoh</span>
-                    <button onclick="move('contoh2')">&#8594;</button>
+                    <button onclick="hapus('contoh2')" title="Tombol hapus item">&#x2715;</button>
+                    <button onclick="edit('contoh2')" title="Tombol edit item">&#9998;</button>
+                    <button onclick="move('contoh2')" title="Tombol pindah item">&#10004;</button>
                 </div>
                 <div class="task" id="contoh3" draggable="true" ondragstart="drag(event)">
                     <span>Contoh</span>
-                    <button onclick="move('contoh3')">&#8594;</button>
+                    <button onclick="hapus('contoh3')" title="Tombol hapus item">&#x2715;</button>
+                    <button onclick="edit('contoh3')" title="Tombol edit item">&#9998;</button>
+                    <button onclick="move('contoh3')" title="Tombol pindah item">&#10004;</button>
                 </div>
             </div>
             <div class="card" id="onprogress" ondrop="drop(event)" ondragover="allowDrop(event)">
@@ -68,11 +74,11 @@
         </div>
 
         <!-- author section -->
-        <a href="https://wa.me/6281529474830?text=Ngopi%20bwanggg:v wkwkwk" target="_blank" rel="noopener noreferrer">
-            <div class="author">
+        <div class="author">
+            <a href="https://wa.me/6281529474830?text=Ngopi%20bwanggg:v wkwkwk" target="_blank" rel="noopener noreferrer">
                 <h3>by Ari Zidane</h3>
-            </div>
-        </a>
+            </a>
+        </div>
 
     </div>
     <script src="script.js"></script>

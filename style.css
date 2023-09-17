@@ -20,12 +20,14 @@ body {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	animation: popUp .4s ease-in-out;
 }
 
 .author {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	animation: popUp .8s ease-in-out;
 }
 
 .board {
@@ -35,6 +37,7 @@ body {
 	border-top: 1px solid #5649ff;
 	border-radius: 11px;
 	padding-top: 1rem;
+	animation: popUp .4s ease-in-out;
 }
 
 .title h3 {
@@ -67,9 +70,11 @@ body {
 
 .author h3:hover {
 	width: 14rem;
-	border-radius: 0 0 4px 4px;
-	border-left: 1px solid #30CFD0;
-	border-right: 1px solid #30CFD0;
+	font-size: 1.8rem;
+	padding: .3rem 5rem;
+	border-radius: 30px 30px 100px 100px;
+	border-left: 2px solid #30CFD0;
+	border-right: 2px solid #30CFD0;
 	animation: colorChanger 2s infinite;
 }
 
@@ -79,6 +84,7 @@ a {
 
 .create-new {
 	padding: 1rem;
+	animation: popUp .5s ease-in-out;
 }
 
 .create-new input {
@@ -100,7 +106,6 @@ a {
 
 .create-new input[type="text"]:hover {
 	width: 17rem;
-	
 }
 
 .create-new button {
@@ -240,7 +245,8 @@ a {
 	border-right: 1px solid rgb(50, 255, 211);
 	border-radius: 5px;
 	padding: 0.5rem 0.2rem 0.5rem 2rem;
-	transition: .3s ease;
+	transition: .3s ease-in-out;
+	animation: popUp .6s ease-in-out;
 }
 
 .task:hover {
@@ -278,10 +284,19 @@ a {
 	.create-new button:hover {
 		width: 18rem;
 	}
+	.author h3:hover {
+		font-size: 1.3rem;
+		padding: .3rem 2.5rem;
+	}
 }
 
 @keyframes colorChanger {
 	25% {border-color: red;}
     50% {border-color: green;}
     75% {border-color: purple;}
+}
+
+@keyframes popUp {
+	0% {transform: scale(0); opacity: 0;}
+    100% {transform: scale(1); opacity: 1;}
 }
