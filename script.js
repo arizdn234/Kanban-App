@@ -11,7 +11,7 @@ function createNew(){
             <span>${newItem}</span>
             <button onclick="hapus('${newItem.toLowerCase().split(" ").join("") + rand}')" title="Tombol hapus item">&#x2715;</button>
             <button onclick="edit('${newItem.toLowerCase().split(" ").join("") + rand}')" title="Tombol edit item">&#9998;</button>
-            <button onclick="move('${newItem.toLowerCase().split(" ").join("") + rand}')" title="Tombol pindah item">&#10004;</button>
+            <button onclick="move('${newItem.toLowerCase().split(" ").join("") + rand}')" title="Tombol pindah item">&#10003;</button>
         </div>
         `
     }
