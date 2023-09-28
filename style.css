@@ -241,6 +241,10 @@ a {
 	background-color: rgb(0, 20, 26);
 	color: rgb(50, 255, 211);
 	margin: .4rem .5rem .5rem .5rem;
+	min-height: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	border-bottom: 1px solid rgb(50, 255, 211);
 	border-right: 1px solid rgb(50, 255, 211);
 	border-radius: 5px;
@@ -253,6 +257,14 @@ a {
 	background-color: rgb(1, 33, 43);
 }
 
+.task span {
+	transition: 1s;
+}
+
+.task span:focus {
+	color: rgb(255, 81, 0);
+}
+
 .task button {
 	background: transparent;
 	width: 1.5rem;
@@ -261,7 +273,6 @@ a {
 	margin-left: .23rem;
 	border: none;
 	color: aqua;
-	float: right;
 	border-radius: 4px;
 	cursor: pointer;
 	transition: .3s;
