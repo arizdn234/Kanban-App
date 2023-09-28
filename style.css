@@ -49,6 +49,9 @@ body {
 	border-bottom: 1px solid #5649ff;
 	border-radius: 0.5rem;
 	margin: 1rem;
+	background-size: 300%;
+	background-position: -100%;
+	animation: textColor 3s infinite alternate-reverse;
 }
 
 .author h3 {
@@ -311,4 +314,10 @@ a {
 @keyframes popUp {
 	0% {transform: scale(0); opacity: 0;}
     100% {transform: scale(1); opacity: 1;}
+}
+
+@keyframes textColor {
+	to {
+		background-position: 100%;
+	}
 }
