@@ -17,8 +17,7 @@
         <!-- createNew section -->
         <div class="create-new">
             <input type="text" name="item" id="item" spellcheck="false" placeholder="Masukkan item">
-            <button onclick="createNew()">Buat</span>
-            </span>
+            <button onclick="createNew()">Buat</button>
         </div>
 
         <!-- msg dialog -->
@@ -39,22 +38,28 @@
                 
                 <!-- task list -->
                 <div class="task" id="contoh1" draggable="true" ondragstart="drag(event)">
-                    <span>Contoh</span>
-                    <button onclick="hapus('contoh1')" title="Tombol hapus item">&#x2715;</button>
-                    <button onclick="edit('contoh1')" title="Tombol edit item">&#9998;</button>
-                    <button onclick="move('contoh1')" title="Tombol pindah item">&#10003;</button>
+                    <span contenteditable="true" spellcheck="false">Contoh</span>
+                    <div>
+                        <button onclick="move('contoh1')" title="Tombol pindah item">&#10003;</button>
+                        <button onclick="edit('contoh1')" title="Tombol edit item">&#9998;</button>
+                        <button onclick="hapus('contoh1')" title="Tombol hapus item">&#x2715;</button>
+                    </div>
                 </div>
                 <div class="task" id="contoh2" draggable="true" ondragstart="drag(event)">
-                    <span>Contoh</span>
-                    <button onclick="hapus('contoh2')" title="Tombol hapus item">&#x2715;</button>
-                    <button onclick="edit('contoh2')" title="Tombol edit item">&#9998;</button>
-                    <button onclick="move('contoh2')" title="Tombol pindah item">&#10003;</button>
+                    <span contenteditable="true" spellcheck="false">Contoh</span>
+                    <div>
+                        <button onclick="move('contoh2')" title="Tombol pindah item">&#10003;</button>
+                        <button onclick="edit('contoh2')" title="Tombol edit item">&#9998;</button>
+                        <button onclick="hapus('contoh2')" title="Tombol hapus item">&#x2715;</button>
+                    </div>
                 </div>
                 <div class="task" id="contoh3" draggable="true" ondragstart="drag(event)">
-                    <span>Contoh</span>
-                    <button onclick="hapus('contoh3')" title="Tombol hapus item">&#x2715;</button>
-                    <button onclick="edit('contoh3')" title="Tombol edit item">&#9998;</button>
-                    <button onclick="move('contoh3')" title="Tombol pindah item">&#10003;</button>
+                    <span contenteditable="true" spellcheck="false">Contoh</span>
+                    <div>
+                        <button onclick="move('contoh3')" title="Tombol pindah item">&#10003;</button>
+                        <button onclick="edit('contoh3')" title="Tombol edit item">&#9998;</button>
+                        <button onclick="hapus('contoh3')" title="Tombol hapus item">&#x2715;</button>
+                    </div>
                 </div>
             </div>
             <div class="card" id="onprogress" ondrop="drop(event)" ondragover="allowDrop(event)">
