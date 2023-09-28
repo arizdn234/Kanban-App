@@ -1,17 +1,19 @@
 function createNew(){
     const backlog = document.getElementById("backlog");
     const newItem = document.getElementById("item").value;
-    const rand = Math.random()*10
+    const rand = Math.random()
     if (!newItem) {
         document.querySelector('.msg').innerHTML = 'Inputnya masih kosong laaa... isi apaan gtu'
         document.querySelector('.dialog').style.right = '.5rem'
     } else {
         backlog.innerHTML += `
         <div class="task" id="${newItem.toLowerCase().split(" ").join("") + rand}" draggable="true" ondragstart="drag(event)">
-            <span>${newItem}</span>
-            <button onclick="hapus('${newItem.toLowerCase().split(" ").join("") + rand}')" title="Tombol hapus item">&#x2715;</button>
-            <button onclick="edit('${newItem.toLowerCase().split(" ").join("") + rand}')" title="Tombol edit item">&#9998;</button>
-            <button onclick="move('${newItem.toLowerCase().split(" ").join("") + rand}')" title="Tombol pindah item">&#10003;</button>
+            <span contenteditable="true" spellcheck="false">${newItem}</span>
+            <div>
+                <button onclick="move('${newItem.toLowerCase().split(" ").join("") + rand}')" title="Tombol pindah item">&#10003;</button>
+                <button onclick="edit('${newItem.toLowerCase().split(" ").join("") + rand}')" title="Tombol edit item">&#9998;</button>
+                <button onclick="hapus('${newItem.toLowerCase().split(" ").join("") + rand}')" title="Tombol hapus item">&#x2715;</button>
+            </div>
         </div>
         `
     }
@@ -46,7 +48,7 @@ function hapus(id) {
 }
 
 function edit(id) {
-    document.querySelector('.msg').innerHTML = 'Maap yak.. tombol edit masih blom fungsi wkwk'
+    document.querySelector('.msg').innerHTML = 'Klo mau edit, tinggal double click tulisannya ya hehe'
     document.querySelector('.dialog').style.right = '.5rem'
 }
 
