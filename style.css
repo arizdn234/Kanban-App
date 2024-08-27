@@ -43,12 +43,15 @@ body {
 .title h3 {
 	font-size: 2.5rem;
 	background: linear-gradient(to right, #30CFD0 0%, #821cff 100%);
-	-webkit-background-clip: text;
+	background-clip: text;
 	-webkit-text-fill-color: transparent;
 	padding: 0.8rem 1.7rem;
 	border-bottom: 1px solid #5649ff;
 	border-radius: 0.5rem;
 	margin: 1rem;
+	background-size: 300%;
+	background-position: -100%;
+	animation: textColor 3s infinite alternate-reverse;
 }
 
 .author h3 {
@@ -57,10 +60,10 @@ body {
 	font-size: 1.5rem;
 	font-weight: lighter;
 	background: linear-gradient(to right top, #30CFD0 20%, #821cff 100%);
-	-webkit-background-clip: text;
+	background-clip: text;
 	-webkit-text-fill-color: transparent;
 	padding: 0.2rem;
-	border-bottom: 2px solid #30CFD0;
+	/* border-bottom: 2px solid #30CFD0; */
 	border-left: none;
 	border-right: none;
 	border-radius: 0.9rem;
@@ -68,7 +71,7 @@ body {
 	transition: .5s;
 }
 
-.author h3:hover {
+/* .author h3:hover {
 	width: 14rem;
 	font-size: 1.8rem;
 	padding: .3rem 5rem;
@@ -76,7 +79,7 @@ body {
 	border-left: 2px solid #30CFD0;
 	border-right: 2px solid #30CFD0;
 	animation: colorChanger 2s infinite;
-}
+} */
 
 a {
 	text-decoration: none;
@@ -311,4 +314,10 @@ a {
 @keyframes popUp {
 	0% {transform: scale(0); opacity: 0;}
     100% {transform: scale(1); opacity: 1;}
+}
+
+@keyframes textColor {
+	to {
+		background-position: 100%;
+	}
 }
